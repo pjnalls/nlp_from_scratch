@@ -1,0 +1,12 @@
+# Once you create a venv virtual environment inside 
+# a clone of this repo, run the following command:
+# $ pip install -r requirements.txt
+# OR
+# This file may be used to create an environment 
+# using the following command:
+# $ conda create --name your_env_name_here --file requirements.txt
+matplotlib
+numpy
+pyyaml
+torch
+torchvision

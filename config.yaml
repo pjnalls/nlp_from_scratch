@@ -1,0 +1,4 @@
+# DATA
+datalink: "https://download.pytorch.org/tutorial/data.zip"
+dataname: data
+datadirectory: data/
