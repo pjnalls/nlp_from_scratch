@@ -22,16 +22,19 @@ class NamesDataset(Dataset):
         self.labels_tensors = []
 
         # Read all the ``.txt`` files in the specified directory
-        text_files = [x for x in os.listdir(os.getcwd() 
-            if 'nlp_from_scratch' in os.getcwd() 
-            else os.getcwd() + '/nlp_from_scratch' + data_dir) 
+        text_files = [x for x in os.listdir(
+            (os.getcwd() + '/nlp_from_scratch'
+             if 'api' in os.getcwd()
+             else os.getcwd()) + data_dir)
             if x.endswith('.txt')]
         text_files.sort()
         # print(text_files)
         for filename in text_files:
             label = os.path.splitext(os.path.basename(filename))[0]
             labels_set.add(label)
-            lines = open(os.getcwd() + data_dir +
+            lines = open((os.getcwd() + '/nlp_from_scratch'
+                         if 'api' in os.getcwd()
+                         else os.getcwd()) + data_dir +
                          f"/{filename}", encoding='utf-8').read().strip().split('\n')
             for name in lines:
                 self.data.append(name)
