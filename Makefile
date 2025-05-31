@@ -22,6 +22,10 @@ evaluate:
 visualize:
 	python -m src.visualization.visualize
 
+# Install the dependencies
+install:
+	pip install -r requirements.txt
+
 # Run the model pipeline
 run: preprocess train evaluate visualize
 
